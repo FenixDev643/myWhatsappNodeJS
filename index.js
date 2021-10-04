@@ -60,7 +60,7 @@ client.on('disconnected', () => {
 })
 
 client.on('message', msg => {
-    if(msg.from == "PhoneNumber@c.us" || msg.from == "PhoneNumber@c.us"){ // ABUELOS
+    if(msg.from == "PhoneNumber@c.us" || msg.from == "PhoneNumber@c.us"){
         if(msg.hasMedia){
             setTimeout(() => {  msg.reply(GoodMessages[Math.floor(Math.random() * GoodMessages.length)]) }, 4000);
         }
@@ -70,7 +70,7 @@ client.on('message', msg => {
             setTimeout(() => {  msg.reply(GoodMessages[Math.floor(Math.random() * GoodMessages.length)]) }, 4000);
         }
     }
-    if(msg.from == "5212281262301@c.us" && msg.body == "Hola"){ // HERMANO
+    if(msg.from == "5212281262301@c.us" && msg.body == "Hola"){ 
         client.sendMessage(msg.from, 'Respuesta en 2 segundos...😁🤗');
         setTimeout(() => {  msg.reply(GoodMessages[Math.floor(Math.random() * GoodMessages.length)]) }, 2000);
     }
