@@ -14,8 +14,8 @@ if(fs.existsSync(SESSION_FILE_PATH)){
 
 const GoodMessages = ["😮😄🤗","👍😁🤗","😁🤗❤️","👍🤔🤗❤️","😺😸❤️"];
 
-const country_code = "521";
-const number = 2283350746;
+const country_code = "111"; //your country code
+const number = 11111111; //your number
 const msg = GoodMessages[Math.floor(Math.random() * GoodMessages.length)];
 
 const client = new Client({
@@ -60,12 +60,12 @@ client.on('disconnected', () => {
 })
 
 client.on('message', msg => {
-    if(msg.from == "5212281208762@c.us" || msg.from == "5212281549223@c.us"){ // ABUELOS
+    if(msg.from == "PhoneNumber@c.us" || msg.from == "PhoneNumber@c.us"){ // ABUELOS
         if(msg.hasMedia){
             setTimeout(() => {  msg.reply(GoodMessages[Math.floor(Math.random() * GoodMessages.length)]) }, 4000);
         }
     }
-    if(msg.from.endsWith("-1623942282@g.us")){
+    if(msg.from.endsWith("-GroupNumber@g.us")){
         if(msg.hasMedia){
             setTimeout(() => {  msg.reply(GoodMessages[Math.floor(Math.random() * GoodMessages.length)]) }, 4000);
         }
